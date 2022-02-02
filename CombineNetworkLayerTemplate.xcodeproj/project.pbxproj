@@ -15,6 +15,12 @@
 		62D7D9B327A986720027F651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D7D9B127A986720027F651 /* LaunchScreen.storyboard */; };
 		62D7D9BC27A9869D0027F651 /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7D9BB27A9869D0027F651 /* HTTPRequestMethod.swift */; };
 		62D7D9BE27A986C40027F651 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7D9BD27A986C40027F651 /* Endpoint.swift */; };
+		62D7D9C027A995A80027F651 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7D9BF27A995A80027F651 /* APIClient.swift */; };
+		62D7D9C327A99B070027F651 /* BooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7D9C227A99B070027F651 /* BooksAPI.swift */; };
+		62D7D9C527A99B530027F651 /* BooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7D9C427A99B530027F651 /* BooksResponse.swift */; };
+		62D7D9C727A99B850027F651 /* BooksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7D9C627A99B850027F651 /* BooksEndpoint.swift */; };
+		62D7D9C927A99BB90027F651 /* BooksAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7D9C827A99BB90027F651 /* BooksAPIService.swift */; };
+		62D7D9CB27A9A5230027F651 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7D9CA27A9A5230027F651 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		62D7D9B427A986720027F651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62D7D9BB27A9869D0027F651 /* HTTPRequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestMethod.swift; sourceTree = "<group>"; };
 		62D7D9BD27A986C40027F651 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		62D7D9BF27A995A80027F651 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		62D7D9C227A99B070027F651 /* BooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPI.swift; sourceTree = "<group>"; };
+		62D7D9C427A99B530027F651 /* BooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksResponse.swift; sourceTree = "<group>"; };
+		62D7D9C627A99B850027F651 /* BooksEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksEndpoint.swift; sourceTree = "<group>"; };
+		62D7D9C827A99BB90027F651 /* BooksAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPIService.swift; sourceTree = "<group>"; };
+		62D7D9CA27A9A5230027F651 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +72,13 @@
 		62D7D9A527A986700027F651 /* CombineNetworkLayerTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				62D7D9C427A99B530027F651 /* BooksResponse.swift */,
+				62D7D9C127A99AED0027F651 /* Service */,
 				62D7D9BA27A986830027F651 /* Network */,
 				62D7D9A627A986700027F651 /* AppDelegate.swift */,
 				62D7D9A827A986700027F651 /* SceneDelegate.swift */,
 				62D7D9AA27A986700027F651 /* ViewController.swift */,
+				62D7D9CA27A9A5230027F651 /* ViewModel.swift */,
 				62D7D9AC27A986700027F651 /* Main.storyboard */,
 				62D7D9AF27A986720027F651 /* Assets.xcassets */,
 				62D7D9B127A986720027F651 /* LaunchScreen.storyboard */,
@@ -77,8 +92,19 @@
 			children = (
 				62D7D9BB27A9869D0027F651 /* HTTPRequestMethod.swift */,
 				62D7D9BD27A986C40027F651 /* Endpoint.swift */,
+				62D7D9BF27A995A80027F651 /* APIClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		62D7D9C127A99AED0027F651 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				62D7D9C227A99B070027F651 /* BooksAPI.swift */,
+				62D7D9C627A99B850027F651 /* BooksEndpoint.swift */,
+				62D7D9C827A99BB90027F651 /* BooksAPIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +179,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D7D9BC27A9869D0027F651 /* HTTPRequestMethod.swift in Sources */,
+				62D7D9C927A99BB90027F651 /* BooksAPIService.swift in Sources */,
 				62D7D9AB27A986700027F651 /* ViewController.swift in Sources */,
+				62D7D9CB27A9A5230027F651 /* ViewModel.swift in Sources */,
+				62D7D9C327A99B070027F651 /* BooksAPI.swift in Sources */,
 				62D7D9A727A986700027F651 /* AppDelegate.swift in Sources */,
+				62D7D9C527A99B530027F651 /* BooksResponse.swift in Sources */,
+				62D7D9C727A99B850027F651 /* BooksEndpoint.swift in Sources */,
 				62D7D9A927A986700027F651 /* SceneDelegate.swift in Sources */,
 				62D7D9BE27A986C40027F651 /* Endpoint.swift in Sources */,
+				62D7D9C027A995A80027F651 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
